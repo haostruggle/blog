@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>确认邮件</title>
+</head>
+<body>
+<p>Dear {{ user.username }}</p>
+<p>欢迎来到 Flask</p>
+<p>点击链接激活你的账户 <a href="{{ url_for('auth.confirm', token=token, _external=True) }}">{{ url_for('auth.confirm', token=token, _external=True) }}</a></p>
+<p>或者，您可以在浏览器的地址栏中粘贴以下链接。</p>
+<p>{{ url_for('auth.confirm', token=token, _external=True) }}</p>
+<p>Sincerely,</p>
+<p>The Flasky Team</p>
+<p><small>Note: replies to this email address are not monitored.</small></p>
+</body>
+</html>

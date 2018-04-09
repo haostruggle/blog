@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>Dear {{ user.username }}</p>
+<p>确认你的新邮件地址<a href="{{ url_for('auth.change_email', token=token, _external=True) }}">点击这里</a></p>
+<p>或者，您可以在浏览器的地址栏中粘贴以下链接:</p>
+<p>{{ url_for('auth.change_email', token=token, _external=True) }}</p>
+</body>
+</html>
